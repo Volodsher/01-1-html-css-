@@ -1,15 +1,10 @@
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - name: Terminal 1
-    init: echo 'init script' # runs during prebuild
+  - init: echo 'init script' # runs during prebuild
     command: echo 'start script'
-  - name: Terminal 2
-    init: Start web server
-    command: python -m http.server 8000
+  - init: python -m http.server 8000
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
-  # - port: 3000
-  #   onOpen: open-preview
   - port: 8000
     onOpen: open-preview
